@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B15E24E16CC72B800CC4D31 /* dijkstra_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B15E24D16CC72B800CC4D31 /* dijkstra_icon@2x.png */; };
+		6B601FE716C872FF006F4788 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B601FE616C872FF006F4788 /* UIKit.framework */; };
+		6B601FE916C872FF006F4788 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B601FE816C872FF006F4788 /* Foundation.framework */; };
+		6B601FEB16C872FF006F4788 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B601FEA16C872FF006F4788 /* CoreGraphics.framework */; };
+		6B601FF116C872FF006F4788 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B601FEF16C872FF006F4788 /* InfoPlist.strings */; };
+		6B601FF316C872FF006F4788 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B601FF216C872FF006F4788 /* main.m */; };
+		6B601FF716C872FF006F4788 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B601FF616C872FF006F4788 /* AppDelegate.m */; };
+		6B601FF916C872FF006F4788 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B601FF816C872FF006F4788 /* Default.png */; };
+		6B601FFB16C872FF006F4788 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B601FFA16C872FF006F4788 /* Default@2x.png */; };
+		6B601FFD16C872FF006F4788 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B601FFC16C872FF006F4788 /* Default-568h@2x.png */; };
+		6B60200016C872FF006F4788 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B601FFF16C872FF006F4788 /* ViewController.m */; };
+		6B60200316C872FF006F4788 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B60200116C872FF006F4788 /* ViewController.xib */; };
+		6B60200B16C87300006F4788 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B60200A16C87300006F4788 /* SenTestingKit.framework */; };
+		6B60200C16C87300006F4788 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B601FE616C872FF006F4788 /* UIKit.framework */; };
+		6B60200D16C87300006F4788 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B601FE816C872FF006F4788 /* Foundation.framework */; };
+		6B60201516C87300006F4788 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B60201316C87300006F4788 /* InfoPlist.strings */; };
+		6B60201816C87300006F4788 /* DijkstrasDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B60201716C87300006F4788 /* DijkstrasDemoTests.m */; };
+		6B98BE8616CDFE5200438517 /* KPGraphCanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B98BE8216CDFE5200438517 /* KPGraphCanvasView.m */; };
+		6B98BE8716CDFE5200438517 /* KPGraphNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B98BE8416CDFE5200438517 /* KPGraphNodeView.m */; };
+		6B98BE8816CDFE5200438517 /* node_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B98BE8516CDFE5200438517 /* node_background.png */; };
+		6B98BE8E16CDFE6C00438517 /* KPGraphNodeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B98BE8B16CDFE6C00438517 /* KPGraphNodeItem.m */; };
+		6B98BE8F16CDFE6C00438517 /* KPGraphResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B98BE8D16CDFE6C00438517 /* KPGraphResolver.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B60200E16C87300006F4788 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B601FDB16C872FF006F4788 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B601FE216C872FF006F4788;
+			remoteInfo = DijkstrasDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B15E24D16CC72B800CC4D31 /* dijkstra_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dijkstra_icon@2x.png"; sourceTree = "<group>"; };
+		6B601FE316C872FF006F4788 /* DijkstrasDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DijkstrasDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B601FE616C872FF006F4788 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6B601FE816C872FF006F4788 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6B601FEA16C872FF006F4788 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6B601FEE16C872FF006F4788 /* DijkstrasDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DijkstrasDemo-Info.plist"; sourceTree = "<group>"; };
+		6B601FF016C872FF006F4788 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B601FF216C872FF006F4788 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B601FF416C872FF006F4788 /* DijkstrasDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DijkstrasDemo-Prefix.pch"; sourceTree = "<group>"; };
+		6B601FF516C872FF006F4788 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6B601FF616C872FF006F4788 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6B601FF816C872FF006F4788 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6B601FFA16C872FF006F4788 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6B601FFC16C872FF006F4788 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6B601FFE16C872FF006F4788 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6B601FFF16C872FF006F4788 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6B60200216C872FF006F4788 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		6B60200916C87300006F4788 /* DijkstrasDemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DijkstrasDemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B60200A16C87300006F4788 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B60201216C87300006F4788 /* DijkstrasDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DijkstrasDemoTests-Info.plist"; sourceTree = "<group>"; };
+		6B60201416C87300006F4788 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B60201616C87300006F4788 /* DijkstrasDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DijkstrasDemoTests.h; sourceTree = "<group>"; };
+		6B60201716C87300006F4788 /* DijkstrasDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DijkstrasDemoTests.m; sourceTree = "<group>"; };
+		6B98BE8116CDFE5200438517 /* KPGraphCanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGraphCanvasView.h; sourceTree = "<group>"; };
+		6B98BE8216CDFE5200438517 /* KPGraphCanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGraphCanvasView.m; sourceTree = "<group>"; };
+		6B98BE8316CDFE5200438517 /* KPGraphNodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGraphNodeView.h; sourceTree = "<group>"; };
+		6B98BE8416CDFE5200438517 /* KPGraphNodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGraphNodeView.m; sourceTree = "<group>"; };
+		6B98BE8516CDFE5200438517 /* node_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = node_background.png; sourceTree = "<group>"; };
+		6B98BE8A16CDFE6C00438517 /* KPGraphNodeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGraphNodeItem.h; sourceTree = "<group>"; };
+		6B98BE8B16CDFE6C00438517 /* KPGraphNodeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGraphNodeItem.m; sourceTree = "<group>"; };
+		6B98BE8C16CDFE6C00438517 /* KPGraphResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGraphResolver.h; sourceTree = "<group>"; };
+		6B98BE8D16CDFE6C00438517 /* KPGraphResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGraphResolver.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B601FE016C872FF006F4788 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B601FE716C872FF006F4788 /* UIKit.framework in Frameworks */,
+				6B601FE916C872FF006F4788 /* Foundation.framework in Frameworks */,
+				6B601FEB16C872FF006F4788 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B60200516C87300006F4788 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B60200B16C87300006F4788 /* SenTestingKit.framework in Frameworks */,
+				6B60200C16C87300006F4788 /* UIKit.framework in Frameworks */,
+				6B60200D16C87300006F4788 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B601FDA16C872FF006F4788 = {
+			isa = PBXGroup;
+			children = (
+				6B15E24D16CC72B800CC4D31 /* dijkstra_icon@2x.png */,
+				6B601FEC16C872FF006F4788 /* DijkstrasDemo */,
+				6B60201016C87300006F4788 /* DijkstrasDemoTests */,
+				6B601FE516C872FF006F4788 /* Frameworks */,
+				6B601FE416C872FF006F4788 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B601FE416C872FF006F4788 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B601FE316C872FF006F4788 /* DijkstrasDemo.app */,
+				6B60200916C87300006F4788 /* DijkstrasDemoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B601FE516C872FF006F4788 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B601FE616C872FF006F4788 /* UIKit.framework */,
+				6B601FE816C872FF006F4788 /* Foundation.framework */,
+				6B601FEA16C872FF006F4788 /* CoreGraphics.framework */,
+				6B60200A16C87300006F4788 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B601FEC16C872FF006F4788 /* DijkstrasDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6B601FF516C872FF006F4788 /* AppDelegate.h */,
+				6B601FF616C872FF006F4788 /* AppDelegate.m */,
+				6B601FFE16C872FF006F4788 /* ViewController.h */,
+				6B601FFF16C872FF006F4788 /* ViewController.m */,
+				6B60200116C872FF006F4788 /* ViewController.xib */,
+				6B98BE8016CDFE5200438517 /* KPGraphView */,
+				6B98BE8916CDFE6C00438517 /* KPGraphKit */,
+				6B601FED16C872FF006F4788 /* Supporting Files */,
+			);
+			path = DijkstrasDemo;
+			sourceTree = "<group>";
+		};
+		6B601FED16C872FF006F4788 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B601FEE16C872FF006F4788 /* DijkstrasDemo-Info.plist */,
+				6B601FEF16C872FF006F4788 /* InfoPlist.strings */,
+				6B601FF216C872FF006F4788 /* main.m */,
+				6B601FF416C872FF006F4788 /* DijkstrasDemo-Prefix.pch */,
+				6B601FF816C872FF006F4788 /* Default.png */,
+				6B601FFA16C872FF006F4788 /* Default@2x.png */,
+				6B601FFC16C872FF006F4788 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B60201016C87300006F4788 /* DijkstrasDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B60201616C87300006F4788 /* DijkstrasDemoTests.h */,
+				6B60201716C87300006F4788 /* DijkstrasDemoTests.m */,
+				6B60201116C87300006F4788 /* Supporting Files */,
+			);
+			path = DijkstrasDemoTests;
+			sourceTree = "<group>";
+		};
+		6B60201116C87300006F4788 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B60201216C87300006F4788 /* DijkstrasDemoTests-Info.plist */,
+				6B60201316C87300006F4788 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B98BE8016CDFE5200438517 /* KPGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				6B98BE8116CDFE5200438517 /* KPGraphCanvasView.h */,
+				6B98BE8216CDFE5200438517 /* KPGraphCanvasView.m */,
+				6B98BE8316CDFE5200438517 /* KPGraphNodeView.h */,
+				6B98BE8416CDFE5200438517 /* KPGraphNodeView.m */,
+				6B98BE8516CDFE5200438517 /* node_background.png */,
+			);
+			path = KPGraphView;
+			sourceTree = "<group>";
+		};
+		6B98BE8916CDFE6C00438517 /* KPGraphKit */ = {
+			isa = PBXGroup;
+			children = (
+				6B98BE8C16CDFE6C00438517 /* KPGraphResolver.h */,
+				6B98BE8D16CDFE6C00438517 /* KPGraphResolver.m */,
+				6B98BE8A16CDFE6C00438517 /* KPGraphNodeItem.h */,
+				6B98BE8B16CDFE6C00438517 /* KPGraphNodeItem.m */,
+			);
+			path = KPGraphKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B601FE216C872FF006F4788 /* DijkstrasDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B60201B16C87300006F4788 /* Build configuration list for PBXNativeTarget "DijkstrasDemo" */;
+			buildPhases = (
+				6B601FDF16C872FF006F4788 /* Sources */,
+				6B601FE016C872FF006F4788 /* Frameworks */,
+				6B601FE116C872FF006F4788 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DijkstrasDemo;
+			productName = DijkstrasDemo;
+			productReference = 6B601FE316C872FF006F4788 /* DijkstrasDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B60200816C87300006F4788 /* DijkstrasDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B60201E16C87300006F4788 /* Build configuration list for PBXNativeTarget "DijkstrasDemoTests" */;
+			buildPhases = (
+				6B60200416C87300006F4788 /* Sources */,
+				6B60200516C87300006F4788 /* Frameworks */,
+				6B60200616C87300006F4788 /* Resources */,
+				6B60200716C87300006F4788 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B60200F16C87300006F4788 /* PBXTargetDependency */,
+			);
+			name = DijkstrasDemoTests;
+			productName = DijkstrasDemoTests;
+			productReference = 6B60200916C87300006F4788 /* DijkstrasDemoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B601FDB16C872FF006F4788 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "MobileX Labs";
+			};
+			buildConfigurationList = 6B601FDE16C872FF006F4788 /* Build configuration list for PBXProject "DijkstrasDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6B601FDA16C872FF006F4788;
+			productRefGroup = 6B601FE416C872FF006F4788 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B601FE216C872FF006F4788 /* DijkstrasDemo */,
+				6B60200816C87300006F4788 /* DijkstrasDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B601FE116C872FF006F4788 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B601FF116C872FF006F4788 /* InfoPlist.strings in Resources */,
+				6B601FF916C872FF006F4788 /* Default.png in Resources */,
+				6B601FFB16C872FF006F4788 /* Default@2x.png in Resources */,
+				6B601FFD16C872FF006F4788 /* Default-568h@2x.png in Resources */,
+				6B60200316C872FF006F4788 /* ViewController.xib in Resources */,
+				6B15E24E16CC72B800CC4D31 /* dijkstra_icon@2x.png in Resources */,
+				6B98BE8816CDFE5200438517 /* node_background.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B60200616C87300006F4788 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B60201516C87300006F4788 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B60200716C87300006F4788 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B601FDF16C872FF006F4788 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B601FF316C872FF006F4788 /* main.m in Sources */,
+				6B601FF716C872FF006F4788 /* AppDelegate.m in Sources */,
+				6B60200016C872FF006F4788 /* ViewController.m in Sources */,
+				6B98BE8616CDFE5200438517 /* KPGraphCanvasView.m in Sources */,
+				6B98BE8716CDFE5200438517 /* KPGraphNodeView.m in Sources */,
+				6B98BE8E16CDFE6C00438517 /* KPGraphNodeItem.m in Sources */,
+				6B98BE8F16CDFE6C00438517 /* KPGraphResolver.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B60200416C87300006F4788 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B60201816C87300006F4788 /* DijkstrasDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B60200F16C87300006F4788 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B601FE216C872FF006F4788 /* DijkstrasDemo */;
+			targetProxy = 6B60200E16C87300006F4788 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B601FEF16C872FF006F4788 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B601FF016C872FF006F4788 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6B60200116C872FF006F4788 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B60200216C872FF006F4788 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		6B60201316C87300006F4788 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B60201416C87300006F4788 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B60201916C87300006F4788 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6B60201A16C87300006F4788 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B60201C16C87300006F4788 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DijkstrasDemo/DijkstrasDemo-Prefix.pch";
+				INFOPLIST_FILE = "DijkstrasDemo/DijkstrasDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6B60201D16C87300006F4788 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DijkstrasDemo/DijkstrasDemo-Prefix.pch";
+				INFOPLIST_FILE = "DijkstrasDemo/DijkstrasDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6B60201F16C87300006F4788 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DijkstrasDemo.app/DijkstrasDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DijkstrasDemo/DijkstrasDemo-Prefix.pch";
+				INFOPLIST_FILE = "DijkstrasDemoTests/DijkstrasDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6B60202016C87300006F4788 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DijkstrasDemo.app/DijkstrasDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DijkstrasDemo/DijkstrasDemo-Prefix.pch";
+				INFOPLIST_FILE = "DijkstrasDemoTests/DijkstrasDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B601FDE16C872FF006F4788 /* Build configuration list for PBXProject "DijkstrasDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B60201916C87300006F4788 /* Debug */,
+				6B60201A16C87300006F4788 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B60201B16C87300006F4788 /* Build configuration list for PBXNativeTarget "DijkstrasDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B60201C16C87300006F4788 /* Debug */,
+				6B60201D16C87300006F4788 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B60201E16C87300006F4788 /* Build configuration list for PBXNativeTarget "DijkstrasDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B60201F16C87300006F4788 /* Debug */,
+				6B60202016C87300006F4788 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B601FDB16C872FF006F4788 /* Project object */;
+}

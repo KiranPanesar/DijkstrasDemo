@@ -30,6 +30,6 @@
 @property BOOL addingNode;
 @property BOOL settingPath;
 
--(void)showRouteBetweenFinalNodes:(NSMutableArray *)nodes;
+-(void)showRouteBetweenFinalNodes:(NSMutableDictionary *)finalNodes;
 
 @end

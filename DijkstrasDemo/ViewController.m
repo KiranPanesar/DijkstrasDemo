@@ -103,15 +103,24 @@
                              endNode:endNode
                 andCompletionHandler:^(NSMutableArray *path, NSInteger weight) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [graphCanvasView showRouteBetweenFinalNodes:path];
+                        
+                        NSMutableDictionary *pathDict = [[NSMutableDictionary alloc] init];
+                        for (int i = 1; i < [path count]; i++) {
+                            [pathDict setObject:[NSNumber numberWithInt:0] forKey:@[[path objectAtIndex:i-1], [path objectAtIndex:i]]];
+                        }
+                        
+                        [graphCanvasView showRouteBetweenFinalNodes:pathDict];
                         
                         NSMutableString *pathString = [[NSMutableString alloc] init];
+                        
                         for (NSString *node in path) {
                             [pathString appendString:node];
                             if (![node isEqualToString:[path objectAtIndex:[path count]-1]]) {
                                 [pathString appendString:@", "];
                             }
                         }
+                        
+                        [[navigationBar topItem] setTitle:[NSString stringWithFormat:@"Route Found With Weight %i", weight]];
                         
                         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Optimum Path Found!"
                                                                             message:[NSString stringWithFormat:@"Optimum path found\n%@\n Weight %i",pathString, weight]

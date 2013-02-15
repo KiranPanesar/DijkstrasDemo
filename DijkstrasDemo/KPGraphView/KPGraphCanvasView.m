@@ -15,11 +15,8 @@ static NSString * letters[] = {@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @
 
 @implementation KPGraphCanvasView
 
--(void)showRouteBetweenFinalNodes:(NSMutableArray *)nodes {
-    finalParings = [[NSMutableDictionary alloc] init];
-    for (int i = 1; i < [nodes count]; i++) {
-        [finalParings setObject:[NSNumber numberWithInt:0] forKey:@[[nodes objectAtIndex:i], [nodes objectAtIndex:i-1]]];
-    }
+-(void)showRouteBetweenFinalNodes:(NSMutableDictionary *)finalNodes {    
+    finalParings = [[NSMutableDictionary alloc] initWithDictionary:finalNodes];
     
     [self setNeedsDisplay];
 }
@@ -27,6 +24,8 @@ static NSString * letters[] = {@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     [firstTappedNode setBackgroundColor:[UIColor clearColor]];
     [secondTappedNode setBackgroundColor:[UIColor clearColor]];
+
+    finalParings = nil;
 
     if ([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Add Arc"]) {
         NSInteger weight = [[[alertView textFieldAtIndex:0] text] integerValue];
@@ -70,22 +69,14 @@ static NSString * letters[] = {@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @
         // If the node requires a 2-char name
         if ([self.graphNodes count] > 25) {
             NSInteger scale = floor([self.graphNodes count] / 26);
-            NSLog(@"Scale: %i", scale);
             NSString *firstChar = letters[scale-1];
-            NSLog(@"First index: %i", scale-1);
-            NSLog(@"First: %@", firstChar);
-            
-            NSLog(@"second index: %i", [self.graphNodes count] - (scale * 26));
             NSString *secondChar = letters[[self.graphNodes count] - (scale * 26)];
-            NSLog(@"second: %@", secondChar);
 
             nodeTag = [NSString stringWithFormat:@"%@%@", firstChar, secondChar];
             
         } else {
             nodeTag = letters[[self.graphNodes count]];
         }
-        
-        NSLog(@"Tag: %@", nodeTag);
         
         [node showNodeAtPoint:touchLocation inParentView:self withTag:nodeTag];
         
@@ -157,19 +148,28 @@ static NSString * letters[] = {@"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @
         
         CGContextRef context = UIGraphicsGetCurrentContext();
         CGContextSaveGState(context);
-        CGContextSetStrokeColorWithColor(context, [[UIColor blackColor]CGColor]);
-        CGContextSetLineWidth(context, 1.0);
+        
+        // if the route has already been found, highlight the optimum route in bold green
+        if (finalParings) {
+            for (NSArray *finalPair in finalParings) {
+                if (([[nodeOne nodeTag] isEqualToString:[finalPair objectAtIndex:0]] && [[nodeTwo nodeTag] isEqualToString:[finalPair objectAtIndex:1]])
+                    || ([[nodeOne nodeTag] isEqualToString:[finalPair objectAtIndex:1]] && [[nodeTwo nodeTag] isEqualToString:[finalPair objectAtIndex:0]])) {
+                    CGContextSetStrokeColorWithColor(context, [[UIColor greenColor]CGColor]);
+                    CGContextSetLineWidth(context, 5.0);
+                }
+            }
+        } else {
+            // If not, just make the line thin, black.
+            CGContextSetStrokeColorWithColor(context, [[UIColor blackColor]CGColor]);
+            CGContextSetLineWidth(context, 1.0);
+        }
+        
         CGContextMoveToPoint(context, nodeOne.center.x, nodeOne.center.y);
         CGContextAddLineToPoint(context, nodeTwo.center.x, nodeTwo.center.y);
         CGContextStrokePath(context);
         CGContextRestoreGState(context);
         
-        for (NSArray *array in finalParings) {
-            if (([[array objectAtIndex:0] isEqualToString:nodeOne.nodeTag] || [[array objectAtIndex:0] isEqualToString:nodeTwo.nodeTag])
-                && ([[array objectAtIndex:1] isEqualToString:nodeOne.nodeTag] || [[array objectAtIndex:1] isEqualToString:nodeTwo.nodeTag])) {
-                CGContextSetStrokeColorWithColor(context, [[UIColor greenColor]CGColor]);
-            }
-        }
+        
         CGSize textSize = [[NSString stringWithFormat:@"%@", weight] sizeWithFont:[UIFont systemFontOfSize:15.0f]];
 
         UILabel *weightLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, textSize.width, textSize.height)];
